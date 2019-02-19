@@ -1,0 +1,17 @@
+{
+  "name": "robot-server-node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "dev": "nodemon server.js -e html,css,js"
+  },
+  "author": "Nicolas Ticona Valdivia <nikolasgamertv@gmail.com> (https://twitter.com/nicolas_tvop)",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4",
+    "socket.io": "^2.2.0"
+  }
+}
