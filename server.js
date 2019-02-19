@@ -12,6 +12,8 @@ app.use(express.urlencoded({extended: false}))
 app.use(express.static(path.resolve(__dirname, 'public')))
 
 
+const PORT = process.env.PORT || 3000
+
 let io = socketIO(server)
 
 // io.onconnection()
@@ -34,9 +36,11 @@ io.on('connection', (socket) => {
     socket.on('move_down', (data) => {
         console.log(data);
     })
+
     socket.on('move_left', (data) => {
         console.log(data);
     })
+
     socket.on('move_right', (data) => {
         console.log(data);
     })
@@ -44,7 +48,7 @@ io.on('connection', (socket) => {
 
 
 
-server.listen('3000', () => {
+server.listen(PORT, () => {
     console.log('Server running');
 })
 
