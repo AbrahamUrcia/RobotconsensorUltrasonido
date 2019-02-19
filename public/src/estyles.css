@@ -1,0 +1,53 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat'
+}
+
+body{
+    padding: 20px;
+}
+
+h1{
+    margin-bottom: 15px;
+}
+
+.control_container{
+    width: 90%;
+    margin: 30px auto;
+}
+
+.control_container .container-top{
+    text-align: center;
+    padding: 20px 0;
+}
+
+.control_container .container-top .btn-up{
+    transform: rotate(-90deg);
+}
+
+.control_container .container-med{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.control_container .container-med .btn-left{
+    transform: rotate(-180deg);
+    margin: 0px 90px;
+}
+
+.control_container .container-med .btn-right{
+    /* transform: rotate(-180deg); */
+    margin: 0px 90px;
+}
+
+.control_container .container-bottom {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.control_container .container-bottom .btn-down{
+    transform: rotate(90deg);
+}

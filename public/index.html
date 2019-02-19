@@ -5,9 +5,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Robot</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link rel="stylesheet" href="src/estyles.css">
+    <link rel="stylesheet" href="src/responsive.css">
+
 </head>
 <body>
     
-    <h1>Robot</h1>
+    <h1>Robot con Sensor</h1>
+
+    <p>Robot con sensor de ultrasonido controlado a control remoto por un Web Server</p>
+
+    <section class="control_container">
+
+        <div class="container-top">
+            <img src="src/img/play-arrow.svg" alt="" class="btn-up btns">  
+        </div>
+        <div class="container-med">
+            <img src="src/img/play-arrow.svg" alt="" class="btn-left btns">  
+            <img src="src/img/play-arrow.svg" alt="" class="btn-right btns">  
+        </div>
+        <div class="container-bottom">
+            <img src="src/img/play-arrow.svg" alt="" class="btn-down btns">              
+        </div> 
+
+    </section>
+
+
+
+    <script src="socket.io/socket.io.js"></script>
+    <script>
+        
+        let BTN_UP = document.querySelector('.btn-up')
+        let BTN_DOWN = document.querySelector('.btn-down')
+        let BTN_LEFT = document.querySelector('.btn-left')
+        let BTN_RIGHT = document.querySelector('.btn-right')
+
+        BTN_UP.addEventListener('click', () =>{
+            socket.emit('move_up', 'Mover arriba')
+        })
+        
+        BTN_DOWN.addEventListener('click', () =>{
+            socket.emit('move_down', 'Mover abajo')
+        })
+        
+        BTN_LEFT.addEventListener('click', () =>{
+            socket.emit('move_left', 'Mover izquierda')
+        })
+        
+        BTN_RIGHT.addEventListener('click', () =>{
+            socket.emit('move_right', 'Mover derecha')
+        })
+
+
+        const socket = io()
+
+        socket.on('connect', () => {
+            console.log('Conectado al servidor');
+        })
+
+        socket.on('saludo', (msg) => {
+            console.log(msg);
+        })
+
+    </script>
+
 </body>
 </html>
