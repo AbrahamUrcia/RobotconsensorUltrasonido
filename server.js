@@ -12,7 +12,7 @@ app.use(express.urlencoded({extended: false}))
 app.use(express.static(path.resolve(__dirname, 'public')))
 
 
-const PORT = process.env.PORT || 3000
+let PORT = process.env.PORT || 3000
 
 let io = socketIO(server)
 
@@ -20,15 +20,8 @@ let io = socketIO(server)
 
 io.on('connection', (socket) => {
     console.log('Usuario conectado');
-    socket.emit('saludo', 'Hola usuario')
-    
-    socket.on('msg', (msg) => {
-        console.log(msg);
-    })
-
 
     // EVENTOS DE MOVIMIENTO
-
     socket.on('move_up', (data) => {
         console.log(data);
     })

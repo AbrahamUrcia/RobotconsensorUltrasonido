@@ -1,6 +1,11 @@
 
 @media screen and (max-width: 500px){
+
+    .control_container{
+        width: 90%;
+    }
+
     .btns{
-        width: 90px;
+        width: 80px !important ;
     }
 }

@@ -14,8 +14,12 @@ h1{
 }
 
 .control_container{
-    width: 90%;
+    width: 60%;
     margin: 30px auto;
+}
+
+.control_container .btns{
+    width: 150px;
 }
 
 .control_container .container-top{
@@ -30,17 +34,18 @@ h1{
 .control_container .container-med{
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-around;
+    text-align: center;
 }
 
 .control_container .container-med .btn-left{
     transform: rotate(-180deg);
-    margin: 0px 90px;
+    margin: 0px 70px;
 }
 
 .control_container .container-med .btn-right{
     /* transform: rotate(-180deg); */
-    margin: 0px 90px;
+    margin: 0px 70px;
 }
 
 .control_container .container-bottom {

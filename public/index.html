@@ -32,6 +32,7 @@
 
     </section>
 
+    <audio src="src/sound/sound.mp3"  id="audio"></audio>
 
 
     <script src="socket.io/socket.io.js"></script>
@@ -42,20 +43,30 @@
         let BTN_LEFT = document.querySelector('.btn-left')
         let BTN_RIGHT = document.querySelector('.btn-right')
 
+        let audio = document.getElementById('audio')
+
         BTN_UP.addEventListener('click', () =>{
             socket.emit('move_up', 'Mover arriba')
+
+            audio.play()
         })
         
         BTN_DOWN.addEventListener('click', () =>{
             socket.emit('move_down', 'Mover abajo')
+            
+            audio.play()
         })
         
         BTN_LEFT.addEventListener('click', () =>{
             socket.emit('move_left', 'Mover izquierda')
+            
+            audio.play()
         })
         
         BTN_RIGHT.addEventListener('click', () =>{
             socket.emit('move_right', 'Mover derecha')
+            
+            audio.play()
         })
 
 
@@ -65,10 +76,7 @@
             console.log('Conectado al servidor');
         })
 
-        socket.on('saludo', (msg) => {
-            console.log(msg);
-        })
-
+        
     </script>
 
 </body>
