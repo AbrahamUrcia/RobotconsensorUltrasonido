@@ -1,0 +1,39 @@
+body {
+  background-color: #EEE;
+  text-align: center;
+  padding: 30px;
+  text-align: center; font-size: width/2pt;
+}
+
+h1 { font-weight: bold; font-size: width/2pt; }
+h2 { font-weight: bold; font-size: width/2pt; }
+button { font-weight: bold; font-size: width/2pt; }
+
+#dial {
+  width: 300px;
+  height: 300px;
+}
+.slider {
+  margin-top: 60px;
+  width: 100%;
+  -webkit-appearance: none;
+}
+.slider:focus {
+  outline: none;
+}
+.slider::-webkit-slider-runnable-track {
+  width: 300px;
+  height: 5px;
+  background: #ddd;
+  border: none;
+  border-radius: 3px;
+}
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: none;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  background: #ab194f;
+  margin-top: -13px;
+}
